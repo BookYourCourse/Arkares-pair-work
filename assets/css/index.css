@@ -1,0 +1,234 @@
+.arkoons-main-card-section {
+    width: 50%;
+    margin-left: 44vh;
+}
+
+
+.first-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left>a {
+    padding: 6px 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    margin-right: -4px;
+    border: 1px solid black;
+}
+.left .active {
+    background-color: #eee;
+}
+.left .second {
+    color: blue;
+    border-left: none;
+}
+
+
+body {
+    padding: 30px;
+    font-size: 20px;
+  }
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.499)
+}
+
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 37vh;
+  top: 1vh;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -70%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .imgBox img {
+  width: 70%;
+  height: 90%;
+}
+/* .card .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+} */
+
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #FFFFDC;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0vh;
+  opacity: 1;
+}
+.card:hover .imgBox img {
+  width: 50%;
+  transition: 0.5s ease-in-out;
+}
+.mouse {
+  height: 300px;
+  width: auto;
+}
+.card_main_content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  /* width: 5vh; */
+  margin-right: 5vh;
+}
+
+.dd-button {
+  display: inline-block;
+  border-radius: 5pc;
+  padding: 10px 30px 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  z-index: 1111;
+  font-size: 16px;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+  width: 21vh;
+  padding: 6px 2px;
+} 
