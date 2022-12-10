@@ -204,6 +204,7 @@ a {
   box-shadow: 4px 5px 50px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   z-index: 5000000;
+  font-size: 13.5px;
 }
 .links_sub_menu {
   display: flex;
