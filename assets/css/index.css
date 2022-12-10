@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400|Poppins:400");
+
+:root {
+  --background_color : #FFFFFF;
+  --divider_color : #C1C1C1;
+  --dropdown_color : #EEEEEE;
+  --font-family-poppins: "Poppins";
+}
+
+body {
+    font-family: var(--font-family-poppins);
+}
+
+.arkoons-main-card-section {
+  display: flex;
+  flex-direction: column;
+  width: 70.1%;
+}
+.product_main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left>a {
+    padding: 6px 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    margin-right: -4px;
+    border: 1px solid black;
+}
+.left .active {
+    background-color: #eee;
+}
+.left .second {
+    color: blue;
+    border-left: none;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.499)
+}
+
+.card_main_content {
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+.card {
+  position: relative;
+  width: 312px;
+  height: 461px;
+  top: 10px;
+  background: #FFFFFF;
+  box-shadow: 3px 2px 40px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 10px;
+}
+.card:hover {
+  transition: 0.5s ease;
+  transform: translate(0, -5px);
+}
+.card:not(hover) {
+  transition: 0.5s ease;
+  transform: translate(-5px, 0);
+}
+.frame-3 {
+  position: relative;
+  width: 300px;
+  height: 451px;
+  left: 6px;
+  top: 5px;
+}
+.frame-3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.frame-3 img {
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 2vh;
+}
+.text_of_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prix_ark_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 110%;
+}
+.info_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 125%;
+}
+.footer_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 106%;
+}
+.buy_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background: #FAC78D;
+  border-radius: 5px;
+  width: 5vh;
+}
+.buy_btn:hover {
+  background-color: #f4962a;
+  transition: 0.3s;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* a:hover {
+  color: #222222
+} */
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  /* width: 5vh; */
+  margin-right: 5vh;
+  cursor: pointer;
+}
+
+.dd-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  width: 19vh;
+  height: max-content;
+  background: #EEEEEE;
+  border-radius: 6px;
+}
+.dd-button:hover {
+  background-color: #d4d0d0;
+  transition: 0.3s;
+}
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+/* .dd-button:hover {
+  background-color: #eeeeee;
+} */
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  /* width: 240px;
+  height: 210px;
+  left: 82px;
+  top: 140px; */
+  box-shadow: 4px 5px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  z-index: 5000000;
+}
+.links_sub_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 27px;
+  gap: 10px;
+  width: 320px;
+  height: 35px;
+  background: #EEEEEE;
+  /* align-self: stretch; */
+  align-self: flex-start;
+  border-radius: 5px;
+}
+
+.links_sub_menu:hover {
+  background-color: #222222;
+  color: white;
+}
+
+.dropdown ul li {
+  list-style: none;
+}
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+  width: max-content;
+  padding: 0;
+} 
